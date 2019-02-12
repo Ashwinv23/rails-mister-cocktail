@@ -1,0 +1,10 @@
+<h1>Awesome cocktails </h1>
+<% @cocktails.each_with_index do |cocktail, index| %>
+  <div>
+    <%= "#{index + 1}." %>
+    <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+  </div>
+<% end %>
+
+<br>
+<%= link_to "Click to add a cocktail", new_cocktail_path %>
